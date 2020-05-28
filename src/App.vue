@@ -1,20 +1,41 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <h2>Overview</h2>
+    <p>This should be a table with 5 row, but it only has 1</p>
+    <table>
+      <tr>
+        <th># of members</th>
+        <td>{{ totalMembers }}</td>
+      </tr>
+      <tr>
+        <th># of Invitess</th>
+        <td>Coming soon</td>
+      </tr>
+      <tr>
+        <th># of Discussion Topics</th>
+        <td>Coming soon</td>
+      </tr>
+      <tr>
+        <th># of Posts</th>
+        <td>Coming soon</td>
+      </tr>
+      <tr>
+        <th># of Shared Files</th>
+        <td>Some text</td>
+      </tr>
+    </table>
   </div>
 </template>
 
 <script lang="ts">
-import Vue from 'vue';
-import HelloWorld from './components/HelloWorld.vue';
-
-export default Vue.extend({
+export default {
   name: 'App',
-  components: {
-    HelloWorld,
+  setup() {
+    return {
+      totalMembers: 123,
+    };
   },
-});
+};
 </script>
 
 <style lang="scss">
